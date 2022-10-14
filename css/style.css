@@ -1,0 +1,215 @@
+@import url('http://fonts.cdnfonts.com/css/chirp-2');
+
+:root {
+  font-size: 16px;
+
+  --twitter-light-blue: hwb(204 12% 5% / 0.1);
+  --twitter-blue: hwb(204 11% 6%);
+  --twitter-dark-blue: hwb(204 10% 15%);
+
+  --twitter-dark: hwb(210 6% 90%);
+  
+  --twitter-text-grey: hwb(206 33% 56%);
+  --twitter-text-dark-grey: hwb(206 24% 74%);
+
+  --twitter-border-grey: hwb(200 81% 13%);
+  --twitter-background-grey: hwb(0 90% 10%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Chirp', sans-serif;
+}
+
+body {
+  overflow-y: scroll;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: auto 870px;
+}
+
+.left-side {
+  height: 100%;
+  background-image: url(../img/twitter-background.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-icon {
+  color: white;
+  font-size: 23rem;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+}
+
+.right-icon {
+  color: var(--twitter-blue);
+  font-size: 2.8rem;
+}
+
+.title {
+  font-size: 4rem;
+  line-height: 5.5rem;
+  margin: 3.5rem 0 3rem;
+  font-family: 'ChirpExtended', sans-serif;
+  color: var(--twitter-dark);
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-family: 'ChirpExtended', sans-serif;
+  margin-bottom: 2rem;
+  color: var(--twitter-dark);
+}
+
+button {
+  width: 300px;
+  border-radius: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: thin solid var(--twitter-border-grey);
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background-color 100ms linear;
+  color: var(--twitter-dark);
+}
+
+button#google {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+button#google > img {
+  height: 1.5rem;
+  vertical-align: middle;
+}
+
+button#google:hover {
+  background-color: var(--twitter-light-blue);
+}
+
+button#apple {
+  font-weight: 700;
+}
+
+button#apple > i {
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
+button#apple:hover {
+  background-color: var(--twitter-background-grey);
+}
+
+.separate {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.separate > div {
+  border-bottom: thin solid var(--twitter-border-grey);
+  flex-grow: 1;
+  opacity: 0.3;
+}
+
+.separate > p {
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+button#signup {
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  background-color: var(--twitter-blue);
+  color: white;
+  font-weight: 700;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+button#signup:hover {
+  background-color: var(--twitter-dark-blue);
+}
+
+.contract {
+  margin: 0.5rem 0 3.2rem;
+  width: 300px;
+  font-size: 0.69rem;
+  color: var(--twitter-text-grey);
+}
+
+.contract a {
+  color: var(--twitter-blue);
+  text-decoration: none;
+}
+
+.contract a:hover {
+  text-decoration: underline;
+}
+
+.have-account {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+button#login {
+  padding: 0.7rem 1rem;
+  color: var(--twitter-blue);
+  font-weight: 700;
+}
+
+button#login:hover {
+  background-color: var(--twitter-light-blue);
+}
+
+.footer-list {
+  padding: 0.7rem 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-list > li {
+  color: var(--twitter-text-grey);
+  font-size: 0.82rem;
+  line-height: 1.5rem;
+}
+
+.footer-list > li > a {
+  padding-right: 1rem;
+  line-height: 1.5rem;
+  color: var(--twitter-text-grey);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.footer-list > li > a:hover {
+  text-decoration: underline;
+}
